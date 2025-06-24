@@ -22,6 +22,9 @@ obj/
 *.cache
 *.vsidx
 *.editorconfig
+*.exe
+*.db
+*.bin
 
 # Ignore NuGet-specific generated files
 *.nuget.dgspec.json
@@ -33,3 +36,4 @@ project.nuget.cache
 
 # Ignore temporary/test logs
 *.testlog
+packages/
