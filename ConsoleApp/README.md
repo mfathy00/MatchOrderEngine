@@ -13,11 +13,11 @@ dotnet build
 ## Running the console
 
 ```
-dotnet run --project ConsoleApp -- PriceTime SampleData/large_orders.csv
+dotnet run --project ConsoleApp -- PriceTime SampleData/sample_orders.csv
 ```
 
-Replace `PriceTime` with `ProRata` to use a different strategy.
-
-The `SampleData/large_orders.csv` file contains a generated order book with 2000
-entries (1000 buy orders followed by 1000 sell orders) which can be used for
-stress testing the engine.
+Replace `PriceTime` with `ProRata` to use a different strategy.  The
+`SampleData/sample_orders.csv` file contains a handful of orders and is useful
+for quickly trying out the matching engine.  A much larger order book for
+stress testing is provided in `SampleData/large_orders.csv` which contains 2000
+entries (1000 buy orders followed by 1000 sell orders).
