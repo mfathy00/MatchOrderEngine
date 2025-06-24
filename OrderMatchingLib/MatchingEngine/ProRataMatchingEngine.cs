@@ -51,7 +51,7 @@ public class ProRataMatchingEngine : IMatchingEngine
                 foreach (var buyer in buyers)
                 {
                     var proportion = (decimal)buyer.Volume / totalVolume;
-                    var matchVolume = Math.Min((int)(proportion * sell.Volume), results[buyer.OrderId].Volume);
+                    var matchVolume = Math.Min((int)(proportion * results[sell.OrderId].Volume), results[buyer.OrderId].Volume);
 
                     if (matchVolume == 0)
                         continue;

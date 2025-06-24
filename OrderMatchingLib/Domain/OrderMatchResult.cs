@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 public class OrderMatchResult
 {
-    public string CompanyId { get; init; }
-    public string OrderId { get; init; }
+    public required string CompanyId { get; init; }
+    public required string OrderId { get; init; }
     public OrderDirection Direction { get; init; }
     public int Volume { get; set; }
     public decimal Notional { get; init; }

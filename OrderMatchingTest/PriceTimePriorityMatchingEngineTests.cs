@@ -18,7 +18,7 @@ public class PriceTimePriorityMatchingEngineTests
         };
 
         var engine = new PriceTimePriorityMatchingEngine();
-        var results = (await engine.MatchAsync(orders).ConfigureAwait(false)).ToDictionary(r => r.OrderId);
+        var results = (await engine.MatchAsync(orders)).ToDictionary(r => r.OrderId);
 
         Assert.Equal(MatchState.NoMatch, results["A1"].MatchState);
         Assert.Equal(MatchState.FullMatch, results["B1"].MatchState);

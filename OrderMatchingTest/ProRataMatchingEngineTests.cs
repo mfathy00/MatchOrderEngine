@@ -16,10 +16,10 @@ public class ProRataMatchingEngineTests
         };
 
         var engine = new ProRataMatchingEngine();
-        var results = (await engine.MatchAsync(orders).ConfigureAwait(false)).ToDictionary(r => r.OrderId);
+        var results = (await engine.MatchAsync(orders)).ToDictionary(r => r.OrderId);
 
         Assert.Equal(MatchState.PartialMatch, results["A1"].MatchState);
         Assert.Equal(MatchState.PartialMatch, results["B1"].MatchState);
-        Assert.Equal(MatchState.FullMatch, results["C1"].MatchState);
+        Assert.Equal(MatchState.PartialMatch, results["C1"].MatchState);
     }
 }
