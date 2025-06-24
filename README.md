@@ -34,7 +34,7 @@ IMatchingEngine engine = strategy switch
     _ => throw new ArgumentException("Unknown strategy")
 };
 ```
-**Why I use it:** 60% more concise than traditional switch statements, improves readability, and reduces bugs in strategy pattern implementation.
+**Why I use it:** more concise than traditional switch statements, improves readability, and reduces bugs in strategy pattern implementation.
 
 #### 3. **Required Properties** 
 ```csharp
