@@ -60,4 +60,4 @@ ArgumentOutOfRangeException.ThrowIfNegativeOrZero(notional);
 
 
 **4. Tracking down a performance issue in production**  
-I created detailed logs to track the processing duration from start to finish.
+I created detailed logs to track processing duration from start to finish in the current application. This is one method of monitoring performance; another is using observability tools—such as tracing, metrics, and logs—to pinpoint where latency occurs.
