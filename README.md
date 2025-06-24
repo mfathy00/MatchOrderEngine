@@ -60,4 +60,4 @@ ArgumentOutOfRangeException.ThrowIfNegativeOrZero(notional);
 
 
 **4. Tracking down a performance issue in production**  
-I create detailed logs to track processing duration from start to end.
+I created detailed logs to track the processing duration from start to finish.
