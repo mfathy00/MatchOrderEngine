@@ -34,3 +34,4 @@ C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\ConsoleApp\obj\Debug\net8.0\re
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\ConsoleApp\obj\Debug\net8.0\ConsoleApp.pdb
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\ConsoleApp\obj\Debug\net8.0\ConsoleApp.genruntimeconfig.cache
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\ConsoleApp\obj\Debug\net8.0\ref\ConsoleApp.dll
+C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\ConsoleApp\obj\Debug\net8.0\ConsoleApp.sourcelink.json

@@ -202,3 +202,4 @@ C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingTest\obj\Debug\ne
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingTest\obj\Debug\net8.0\OrderMatchingTest.pdb
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingTest\obj\Debug\net8.0\OrderMatchingTest.genruntimeconfig.cache
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingTest\obj\Debug\net8.0\ref\OrderMatchingTest.dll
+C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingTest\obj\Debug\net8.0\OrderMatchingTest.sourcelink.json

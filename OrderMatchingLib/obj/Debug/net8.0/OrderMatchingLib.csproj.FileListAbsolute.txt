@@ -20,3 +20,4 @@ C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingLib\obj\Debug\net
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingLib\obj\Debug\net8.0\refint\OrderMatchingLib.dll
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingLib\obj\Debug\net8.0\OrderMatchingLib.pdb
 C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingLib\obj\Debug\net8.0\ref\OrderMatchingLib.dll
+C:\Work\MohamedDeifalla-PrincipalSoftwareEngineer\OrderMatchingLib\obj\Debug\net8.0\OrderMatchingLib.sourcelink.json

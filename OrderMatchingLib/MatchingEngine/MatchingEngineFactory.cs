@@ -9,7 +9,7 @@ public static class MatchingEngineFactory
 
     public static IMatchingEngine Create(string strategy, ILogger? logger)
     {
-        var engine = strategy switch
+        IMatchingEngine engine = strategy switch
         {
             "PriceTime" => new PriceTimePriorityMatchingEngine(logger),
             "ProRata" => new ProRataMatchingEngine(logger),

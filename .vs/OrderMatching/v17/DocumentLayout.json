@@ -1,12 +1,120 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D21FA9D-A426-5144-AD0F-524F9D7A515C}|ConsoleApp\\ConsoleApp.csproj|c:\\work\\mohameddeifalla-principalsoftwareengineer\\consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D21FA9D-A426-5144-AD0F-524F9D7A515C}|ConsoleApp\\ConsoleApp.csproj|solutionrelative:consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D21FA9D-A426-5144-AD0F-524F9D7A515C}|ConsoleApp\\ConsoleApp.csproj|c:\\work\\mohameddeifalla-principalsoftwareengineer\\consoleapp\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{1D21FA9D-A426-5144-AD0F-524F9D7A515C}|ConsoleApp\\ConsoleApp.csproj|solutionrelative:consoleapp\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF92DAD-BBA1-D761-41EC-EF09C6DCE4E2}|OrderMatchingLib\\OrderMatchingLib.csproj|c:\\work\\mohameddeifalla-principalsoftwareengineer\\ordermatchinglib\\matchingengine\\pricetimeprioritymatchingengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAF92DAD-BBA1-D761-41EC-EF09C6DCE4E2}|OrderMatchingLib\\OrderMatchingLib.csproj|solutionrelative:ordermatchinglib\\matchingengine\\pricetimeprioritymatchingengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF92DAD-BBA1-D761-41EC-EF09C6DCE4E2}|OrderMatchingLib\\OrderMatchingLib.csproj|c:\\work\\mohameddeifalla-principalsoftwareengineer\\ordermatchinglib\\matchingengine\\matchingenginefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAF92DAD-BBA1-D761-41EC-EF09C6DCE4E2}|OrderMatchingLib\\OrderMatchingLib.csproj|solutionrelative:ordermatchinglib\\matchingengine\\matchingenginefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF92DAD-BBA1-D761-41EC-EF09C6DCE4E2}|OrderMatchingLib\\OrderMatchingLib.csproj|c:\\work\\mohameddeifalla-principalsoftwareengineer\\ordermatchinglib\\ordermatchinglib.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BAF92DAD-BBA1-D761-41EC-EF09C6DCE4E2}|OrderMatchingLib\\OrderMatchingLib.csproj|solutionrelative:ordermatchinglib\\ordermatchinglib.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF92DAD-BBA1-D761-41EC-EF09C6DCE4E2}|OrderMatchingLib\\OrderMatchingLib.csproj|c:\\work\\mohameddeifalla-principalsoftwareengineer\\ordermatchinglib\\matchingengine\\proratamatchingengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAF92DAD-BBA1-D761-41EC-EF09C6DCE4E2}|OrderMatchingLib\\OrderMatchingLib.csproj|solutionrelative:ordermatchinglib\\matchingengine\\proratamatchingengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\ConsoleApp\\README.md",
+              "RelativeDocumentMoniker": "ConsoleApp\\README.md",
+              "ToolTip": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\ConsoleApp\\README.md",
+              "RelativeToolTip": "ConsoleApp\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-06-24T04:29:49.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\ConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp\\Program.cs",
+              "ToolTip": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\ConsoleApp\\Program.cs",
+              "RelativeToolTip": "ConsoleApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T04:29:48.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MatchingEngineFactory.cs",
+              "DocumentMoniker": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\OrderMatchingLib\\MatchingEngine\\MatchingEngineFactory.cs",
+              "RelativeDocumentMoniker": "OrderMatchingLib\\MatchingEngine\\MatchingEngineFactory.cs",
+              "ToolTip": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\OrderMatchingLib\\MatchingEngine\\MatchingEngineFactory.cs",
+              "RelativeToolTip": "OrderMatchingLib\\MatchingEngine\\MatchingEngineFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T04:29:06.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProRataMatchingEngine.cs",
+              "DocumentMoniker": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\OrderMatchingLib\\MatchingEngine\\ProRataMatchingEngine.cs",
+              "RelativeDocumentMoniker": "OrderMatchingLib\\MatchingEngine\\ProRataMatchingEngine.cs",
+              "ToolTip": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\OrderMatchingLib\\MatchingEngine\\ProRataMatchingEngine.cs",
+              "RelativeToolTip": "OrderMatchingLib\\MatchingEngine\\ProRataMatchingEngine.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T03:50:27.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PriceTimePriorityMatchingEngine.cs",
+              "DocumentMoniker": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\OrderMatchingLib\\MatchingEngine\\PriceTimePriorityMatchingEngine.cs",
+              "RelativeDocumentMoniker": "OrderMatchingLib\\MatchingEngine\\PriceTimePriorityMatchingEngine.cs",
+              "ToolTip": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\OrderMatchingLib\\MatchingEngine\\PriceTimePriorityMatchingEngine.cs",
+              "RelativeToolTip": "OrderMatchingLib\\MatchingEngine\\PriceTimePriorityMatchingEngine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T03:50:12.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderMatchingLib.csproj",
+              "DocumentMoniker": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\OrderMatchingLib\\OrderMatchingLib.csproj",
+              "RelativeDocumentMoniker": "OrderMatchingLib\\OrderMatchingLib.csproj",
+              "ToolTip": "C:\\Work\\MohamedDeifalla-PrincipalSoftwareEngineer\\OrderMatchingLib\\OrderMatchingLib.csproj",
+              "RelativeToolTip": "OrderMatchingLib\\OrderMatchingLib.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-24T03:50:05.933Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
