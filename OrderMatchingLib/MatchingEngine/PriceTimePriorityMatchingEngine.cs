@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 public class PriceTimePriorityMatchingEngine : IMatchingEngine
 {
+    private readonly ILogger? _logger;
+
+    public PriceTimePriorityMatchingEngine(ILogger? logger = null)
+    {
+        _logger = logger;
+    }
     public IEnumerable<OrderMatchResult> Match(IEnumerable<Order> orders)
     {
         if (orders == null) throw new ArgumentNullException(nameof(orders));
 
-        var results = orders.ToDictionary(o => o.OrderId, o => new OrderMatchResult
+        try
+        {
+            var orderList = orders.ToList();
+            _logger?.LogInfo($"Starting PriceTime match with {orderList.Count} orders");
+
+        var results = orderList.ToDictionary(o => o.OrderId, o => new OrderMatchResult
         {
             CompanyId = o.CompanyId,
             OrderId = o.OrderId,
@@ -20,11 +31,11 @@ public class PriceTimePriorityMatchingEngine : IMatchingEngine
             MatchState = MatchState.NoMatch
         });
 
-        var buys = orders.Where(o => o.Direction == OrderDirection.Buy)
+        var buys = orderList.Where(o => o.Direction == OrderDirection.Buy)
                           .OrderByDescending(o => o.Notional)
                           .ThenBy(o => o.OrderDateTime).ToList();
 
-        var sells = orders.Where(o => o.Direction == OrderDirection.Sell)
+        var sells = orderList.Where(o => o.Direction == OrderDirection.Sell)
                            .OrderBy(o => o.OrderDateTime).ToList();
 
         foreach (var sell in sells)
@@ -40,6 +51,8 @@ public class PriceTimePriorityMatchingEngine : IMatchingEngine
                 results[buy.OrderId].Matches.Add((sell.OrderId, buy.Notional, matchVolume));
                 results[sell.OrderId].Matches.Add((buy.OrderId, buy.Notional, matchVolume));
 
+                _logger?.LogInfo($"Matched {buy.OrderId} -> {sell.OrderId} vol {matchVolume} @ {buy.Notional}");
+
                 results[buy.OrderId].MatchState = results[buy.OrderId].Volume == 0 ? MatchState.FullMatch : MatchState.PartialMatch;
                 results[sell.OrderId].MatchState = results[sell.OrderId].Volume == 0 ? MatchState.FullMatch : MatchState.PartialMatch;
 
@@ -48,12 +61,27 @@ public class PriceTimePriorityMatchingEngine : IMatchingEngine
             }
         }
 
-        return results.Values;
+            _logger?.LogInfo("PriceTime match completed");
+            return results.Values;
+        }
+        catch (Exception ex)
+        {
+            _logger?.LogError("PriceTime match failed", ex);
+            throw;
+        }
     }
 
-    public Task<IEnumerable<OrderMatchResult>> MatchAsync(IEnumerable<Order> orders, CancellationToken cancellationToken = default)
+    public async Task<IEnumerable<OrderMatchResult>> MatchAsync(IEnumerable<Order> orders, CancellationToken cancellationToken = default)
     {
-        // Execute the CPU-bound matching algorithm on the thread pool to avoid blocking caller threads
-        return Task.Run(() => Match(orders), cancellationToken);
+        try
+        {
+            // Execute the CPU-bound matching algorithm on the thread pool to avoid blocking caller threads
+            return await Task.Run(() => Match(orders), cancellationToken).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            _logger?.LogError("PriceTime match async failed", ex);
+            throw;
+        }
     }
 }

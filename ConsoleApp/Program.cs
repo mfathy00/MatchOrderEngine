@@ -15,8 +15,11 @@ class Program
         var strategy = args[0];
         var path = args[1];
 
-        var engine = MatchingEngineFactory.Create(strategy);
-        var orders = await OrderBookLoader.LoadFromCsvAsync(path);
+        var logger = new CsvLogger("logs.csv");
+        LoggingSetup.RegisterGlobalExceptionHandlers(logger);
+
+        var engine = MatchingEngineFactory.Create(strategy, logger);
+        var orders = await logger.LogExecutionAsync("LoadOrders", () => OrderBookLoader.LoadFromCsvAsync(path));
         var results = await engine.MatchAsync(orders);
 
         foreach (var result in results)

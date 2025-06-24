@@ -4,11 +4,20 @@ public static class MatchingEngineFactory
 {
     public static IMatchingEngine Create(string strategy)
     {
-        return strategy switch
+        return Create(strategy, null);
+    }
+
+    public static IMatchingEngine Create(string strategy, ILogger? logger)
+    {
+        var engine = strategy switch
         {
-            "PriceTime" => new PriceTimePriorityMatchingEngine(),
-            "ProRata" => new ProRataMatchingEngine(),
+            "PriceTime" => new PriceTimePriorityMatchingEngine(logger),
+            "ProRata" => new ProRataMatchingEngine(logger),
             _ => throw new ArgumentException("Unknown strategy")
         };
+
+        return logger != null
+            ? new LoggingMatchingEngineDecorator(engine, logger)
+            : engine;
     }
 }
