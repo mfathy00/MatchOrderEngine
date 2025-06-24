@@ -4,7 +4,7 @@ I spent approximately 6 hours designing, implementing, and testing the Order Mat
 **2. Additional features if more time were available**  
 - **Stress-test benchmark**: Use BenchmarkDotNet to simulate and measure performance with over 1 million records, ensuring the library scales under heavy load.  
 - **Dockerization & CI/CD**: Add a Dockerfile and GitHub Actions/Azure DevOps pipeline for automated build, test, and deployment.  
-- **Enhanced observability**: Integrate Application Insights or New Relic for real-time monitoring and spike detection.
+- **Enhanced observability**: Integrate Application Insights like New Relic for real-time monitoring and spike detection.
 
 **3. Most useful features in .NET 8 & Modern C# used in this project**
 
