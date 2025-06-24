@@ -1,0 +1,11 @@
+C:\Work\OrderMatchingLib\bin\Release\net8.0\OrderMatchingLib.deps.json
+C:\Work\OrderMatchingLib\bin\Release\net8.0\OrderMatchingLib.dll
+C:\Work\OrderMatchingLib\bin\Release\net8.0\OrderMatchingLib.pdb
+C:\Work\OrderMatchingLib\obj\Release\net8.0\OrderMatchingLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\OrderMatchingLib\obj\Release\net8.0\OrderMatchingLib.AssemblyInfoInputs.cache
+C:\Work\OrderMatchingLib\obj\Release\net8.0\OrderMatchingLib.AssemblyInfo.cs
+C:\Work\OrderMatchingLib\obj\Release\net8.0\OrderMatchingLib.csproj.CoreCompileInputs.cache
+C:\Work\OrderMatchingLib\obj\Release\net8.0\OrderMatchingLib.dll
+C:\Work\OrderMatchingLib\obj\Release\net8.0\refint\OrderMatchingLib.dll
+C:\Work\OrderMatchingLib\obj\Release\net8.0\OrderMatchingLib.pdb
+C:\Work\OrderMatchingLib\obj\Release\net8.0\ref\OrderMatchingLib.dll

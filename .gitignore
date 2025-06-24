@@ -1,0 +1,35 @@
+# Ignore Visual Studio-specific folders and files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Copilot and IntelliSense cache
+.vs/**/CopilotIndices/
+.vs/**/DesignTimeBuild/
+.vs/**/FileContentIndex/
+.vs/**/v*/.futdcache.v2
+.vs/**/v*/TestStore/
+
+# Build output
+bin/
+obj/
+
+# Ignore compiled DLLs, PDBs, and intermediate build files
+*.dll
+*.pdb
+*.cache
+*.vsidx
+*.editorconfig
+
+# Ignore NuGet-specific generated files
+*.nuget.dgspec.json
+project.assets.json
+project.nuget.cache
+
+# Ignore any .dtbcache files
+*.dtbcache.*
+
+# Ignore temporary/test logs
+*.testlog
