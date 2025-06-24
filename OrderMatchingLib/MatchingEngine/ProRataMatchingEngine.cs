@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 public class ProRataMatchingEngine : IMatchingEngine
 {
+    private readonly ILogger? _logger;
+
+    public ProRataMatchingEngine(ILogger? logger = null)
+    {
+        _logger = logger;
+    }
     public IEnumerable<OrderMatchResult> Match(IEnumerable<Order> orders)
     {
         if (orders == null) throw new ArgumentNullException(nameof(orders));
 
-        var results = orders.ToDictionary(o => o.OrderId, o => new OrderMatchResult
+        try
+        {
+            var orderList = orders.ToList();
+            _logger?.LogInfo($"Starting ProRata match with {orderList.Count} orders");
+
+        var results = orderList.ToDictionary(o => o.OrderId, o => new OrderMatchResult
         {
             CompanyId = o.CompanyId,
             OrderId = o.OrderId,
@@ -20,10 +31,10 @@ public class ProRataMatchingEngine : IMatchingEngine
             MatchState = MatchState.NoMatch
         });
 
-        var buyGroups = orders.Where(o => o.Direction == OrderDirection.Buy)
+        var buyGroups = orderList.Where(o => o.Direction == OrderDirection.Buy)
                                .GroupBy(o => o.Notional);
 
-        var sells = orders.Where(o => o.Direction == OrderDirection.Sell)
+        var sells = orderList.Where(o => o.Direction == OrderDirection.Sell)
                            .OrderBy(o => o.OrderDateTime).ToList();
 
         foreach (var group in buyGroups)
@@ -50,6 +61,8 @@ public class ProRataMatchingEngine : IMatchingEngine
                     results[buyer.OrderId].Matches.Add((sell.OrderId, buyer.Notional, matchVolume));
                     results[sell.OrderId].Matches.Add((buyer.OrderId, buyer.Notional, matchVolume));
 
+                    _logger?.LogInfo($"Matched {buyer.OrderId} -> {sell.OrderId} vol {matchVolume} @ {buyer.Notional}");
+
                     results[buyer.OrderId].MatchState = results[buyer.OrderId].Volume == 0 ? MatchState.FullMatch : MatchState.PartialMatch;
                     results[sell.OrderId].MatchState = results[sell.OrderId].Volume == 0 ? MatchState.FullMatch : MatchState.PartialMatch;
 
@@ -59,12 +72,27 @@ public class ProRataMatchingEngine : IMatchingEngine
             }
         }
 
-        return results.Values;
+            _logger?.LogInfo("ProRata match completed");
+            return results.Values;
+        }
+        catch (Exception ex)
+        {
+            _logger?.LogError("ProRata match failed", ex);
+            throw;
+        }
     }
 
-    public Task<IEnumerable<OrderMatchResult>> MatchAsync(IEnumerable<Order> orders, CancellationToken cancellationToken = default)
+    public async Task<IEnumerable<OrderMatchResult>> MatchAsync(IEnumerable<Order> orders, CancellationToken cancellationToken = default)
     {
-        // Execute CPU-bound work on the thread pool
-        return Task.Run(() => Match(orders), cancellationToken);
+        try
+        {
+            // Execute CPU-bound work on the thread pool
+            return await Task.Run(() => Match(orders), cancellationToken).ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            _logger?.LogError("ProRata match async failed", ex);
+            throw;
+        }
     }
 }
