@@ -1,5 +1,5 @@
 **1. Time spent on the engineering task**  
-I spent approximately 6 hours designing, implementing, and testing the .NET 8 order matching engine, ensuring strict adherence to SOLID principles, Clean Architecture, and ultra-low-latency requirements.
+I spent approximately 6 hours designing, implementing, and testing the Order Matching Engine library. I also incorporated the Factory and Strategy design patterns, ensuring strict adherence to SOLID principles, Clean Architecture, and ultra-low-latency requirements.
 
 **2. Additional features if more time were available**  
 - **Stress-test benchmark**: Use BenchmarkDotNet to simulate and measure performance with over 1 million records, ensuring the library scales under heavy load.  
